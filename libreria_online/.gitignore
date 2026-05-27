@@ -1,0 +1,17 @@
+# Carpetas de dependencias
+backend/node_modules/
+frontend/node_modules/
+
+# Archivos de configuración y variables de entorno (¡Súper importante!)
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Producción / Compilación de React
+frontend/dist/
+frontend/build/
+
+# Archivos del sistema operativo o del editor
+.DS_Store
+Thumbs.db
+.vscode/

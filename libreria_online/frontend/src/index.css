@@ -1,0 +1,302 @@
+/* frontend/src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --color-fondo: #f1f5f9;
+  --color-texto: #1e293b;
+  --color-primario: #4f46e5;
+  --color-primario-hover: #4338ca;
+  --color-exito: #10b981;
+  --color-tarjeta: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* Contenedor principal de la cuadrícula de libros */
+.grid-libros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Tarjeta individual de cada libro */
+.tarjeta-libro {
+  background-color: var(--color-tarjeta);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Efecto hover tradicional en CSS */
+.tarjeta-libro:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-libro img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.btn-agregar {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-agregar:hover {
+  background-color: var(--color-primario-hover);
+}
+
+/* --- Estilos para Login y Registro --- */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  padding: 20px;
+}
+
+.auth-card {
+  background-color: var(--color-tarjeta);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--color-texto);
+  font-weight: 700;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-texto);
+}
+
+.input-field {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: var(--color-primario-hover);
+}
+
+/* --- Estilos para el Panel de Admin --- */
+.admin-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-panel {
+  background-color: var(--color-tarjeta);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.admin-panel h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid var(--color-fondo);
+  padding-bottom: 10px;
+}
+
+.tabla-admin {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-admin th {
+  background-color: var(--color-fondo);
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.tabla-admin td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+/* --- Vista de Detalle de Libro --- */
+.detalle-wrapper {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  background-color: var(--color-tarjeta);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .detalle-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+.detalle-imagen {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-info h1 {
+  font-size: 32px;
+  margin: 0 0 10px 0;
+  color: var(--color-texto);
+}
+
+.detalle-info .autor {
+  font-size: 18px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.detalle-info .precio {
+  font-size: 32px;
+  color: var(--color-exito);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.detalle-info .descripcion {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 30px;
+  white-space: pre-wrap; /* Respeta los saltos de línea de la sinopsis */
+}
+
+.badge-stock {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #e0e7ff;
+  color: var(--color-primario);
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.btn-secundario {
+  display: block;
+  text-align: center;
+  width: 88%;
+  padding: 12px;
+  background-color: transparent;
+  color: var(--color-primario);
+  border: 2px solid var(--color-primario);
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.btn-secundario:hover {
+  background-color: var(--color-primario);
+  color: white;
+}

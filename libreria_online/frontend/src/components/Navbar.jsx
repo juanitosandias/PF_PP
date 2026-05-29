@@ -5,7 +5,7 @@ import { CartContext } from '../context/CartContext'; // <-- Importar nuestro co
 
 const Navbar = () => {
   const navigate = useNavigate();
-  // Extraemos solo la variable 'carrito' de nuestro contexto
+  // Extraemos la variable 'carrito' de nuestro contexto
   const { carrito } = useContext(CartContext); 
   
   const token = localStorage.getItem('token');
@@ -31,7 +31,7 @@ const Navbar = () => {
 
       <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
         
-        {/* ÍCONO DEL CARRITO (Visible siempre) */}
+        {/* ÍCONO DEL CARRITO */}
         <Link to="/cart" style={{ textDecoration: 'none', fontSize: '18px', display: 'flex', alignItems: 'center', gap: '5px' }}>
           🛒 <span style={{ backgroundColor: '#f59e0b', color: 'white', borderRadius: '50%', padding: '2px 8px', fontSize: '14px', fontWeight: 'bold' }}>
             {totalArticulos}

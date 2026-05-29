@@ -1,6 +1,6 @@
 // frontend/src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast'; // <-- 1. Importamos el Toaster
+import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -17,7 +17,7 @@ function App() {
       <Router>
         <div className="app-container">
           
-          {/* 2. Colocamos el Toaster aquí. Puedes cambiar la posición a top-right, bottom-center, etc. */}
+          {/*  */}
           <Toaster 
             position="bottom-right" 
             toastOptions={{

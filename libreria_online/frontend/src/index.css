@@ -37,7 +37,7 @@ body {
   transition: box-shadow 0.3s ease;
 }
 
-/* Efecto hover tradicional en CSS */
+/* Efecto hover tradicional */
 .tarjeta-libro:hover {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
@@ -67,7 +67,7 @@ body {
   background-color: var(--color-primario-hover);
 }
 
-/* --- Estilos para Login y Registro --- */
+/* Estilos para Login y Registro */
 .auth-wrapper {
   display: flex;
   justify-content: center;
@@ -140,7 +140,7 @@ body {
   background-color: var(--color-primario-hover);
 }
 
-/* --- Estilos para el Panel de Admin --- */
+/* Estilos para el Panel de Admin*/
 .admin-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -209,7 +209,7 @@ body {
   background-color: #dc2626;
 }
 
-/* --- Vista de Detalle de Libro --- */
+/* Estilos para la Vista de Detalle de Libro */
 .detalle-wrapper {
   max-width: 1000px;
   margin: 40px auto;
@@ -265,7 +265,7 @@ body {
   line-height: 1.7;
   color: #475569;
   margin-bottom: 30px;
-  white-space: pre-wrap; /* Respeta los saltos de línea de la sinopsis */
+  white-space: pre-wrap; 
 }
 
 .badge-stock {

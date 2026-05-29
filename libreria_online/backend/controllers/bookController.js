@@ -1,7 +1,7 @@
 // backend/controllers/bookController.js
 const Book = require('../models/Book');
 
-// GET: Obtener todos los libros (Público)
+// GET: Obtener todos los libros
 const obtenerLibros = async (req, res) => {
     try {
         const libros = await Book.find();
@@ -11,7 +11,7 @@ const obtenerLibros = async (req, res) => {
     }
 };
 
-// GET: Obtener un solo libro por su ID (Público)
+// GET: Obtener un solo libro por su ID 
 const obtenerLibroPorId = async (req, res) => {
     try {
         const libro = await Book.findById(req.params.id);
@@ -24,7 +24,7 @@ const obtenerLibroPorId = async (req, res) => {
     }
 };
 
-// POST: Agregar un nuevo libro (Más adelante será solo para Admin)
+// POST: Agregar un nuevo libro (solo para Admin)
 const crearLibro = async (req, res) => {
     try {
         const { titulo, autor, descripcion, precio, stock, imagenUrl } = req.body;

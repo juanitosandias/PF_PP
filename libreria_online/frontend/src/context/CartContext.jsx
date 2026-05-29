@@ -2,10 +2,10 @@
 import { createContext, useState } from 'react';
 import toast from 'react-hot-toast';
 
-// Creamos el contexto (la "nube" de datos)
+// Creamos el contexto
 export const CartContext = createContext();
 
-// Creamos el proveedor (el componente que envolverá nuestra app)
+// Creamos el proveedor
 export const CartProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]); // El estado global del carrito
 
@@ -31,7 +31,7 @@ export const CartProvider = ({ children }) => {
     setCarrito(carrito.filter(item => item._id !== id));
   };
 
-  // Función para vaciar todo el carrito (útil para cuando se complete la compra)
+  // Función para vaciar todo el carrito (para cuando se complete la compra)
   const vaciarCarrito = () => {
     setCarrito([]);
   };

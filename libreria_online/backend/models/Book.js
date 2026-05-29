@@ -24,7 +24,7 @@ const bookSchema = new mongoose.Schema({
         default: 0 
     },
     imagenUrl: { 
-        type: String // Aquí guardaremos la URL de la imagen de portada
+        type: String 
     }
 }, { 
     timestamps: true 

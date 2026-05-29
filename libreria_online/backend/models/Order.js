@@ -23,7 +23,7 @@ const orderSchema = new mongoose.Schema({
     },
     estado: { 
         type: String, 
-        default: 'completado' // Podría ser 'pendiente' si implementaras pasarelas de pago reales
+        default: 'completado' 
     }
 }, { 
     timestamps: true 

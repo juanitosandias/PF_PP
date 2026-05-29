@@ -8,7 +8,7 @@ const { protect, admin } = require('../middleware/authMiddleware');
 // Crear pedido (Cualquier usuario logueado)
 router.post('/', protect, crearPedido);
 
-// Ver mis pedidos (Cualquier usuario logueado) <-- NUEVA RUTA
+// Ver mis pedidos (Cualquier usuario logueado)
 router.get('/mis-pedidos', protect, obtenerMisPedidos);
 
 // Ver todos los pedidos (Solo administradores)

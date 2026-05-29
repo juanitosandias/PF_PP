@@ -9,10 +9,10 @@ const {
     eliminarLibro 
 } = require('../controllers/bookController');
 
-// Importamos nuestros middlewares de seguridad
+// Importamos middlewares de seguridad
 const { protect, admin } = require('../middleware/authMiddleware');
 
-// Rutas públicas (cualquiera puede ver el catálogo)
+// Rutas públicas
 router.get('/', obtenerLibros);
 router.get('/:id', obtenerLibroPorId);
 

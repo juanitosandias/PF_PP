@@ -22,12 +22,12 @@ const Cart = () => {
     }
 
     try {
-      // 1. Configuramos el Token de autorización
+      // Configuramos el Token de autorización
       const config = {
         headers: { Authorization: `Bearer ${token}` }
       };
 
-      // 2. Mapeamos el carrito para enviarlo con la estructura que espera el modelo Order.js
+      // Mapeamos el carrito para enviarlo con la estructura que espera el modelo Order.js
       const datosPedido = {
         articulos: carrito.map(item => ({
           libroId: item._id,
@@ -38,7 +38,7 @@ const Cart = () => {
         total: total
       };
 
-      // 3. Enviamos el POST a nuestra nueva ruta
+      // Enviamos el POST a nuestra nueva ruta
       await axios.post('http://localhost:3000/api/orders', datosPedido, config);
 
       toast.success("¡Compra realizada con éxito!");
@@ -50,7 +50,7 @@ const Cart = () => {
     }
   };
 
-  // Si el carrito está vacío, mostramos un mensaje amigable
+  // Si el carrito está vacío, mostramos un mensaje 
   if (carrito.length === 0) {
     return (
       <div style={{ padding: '50px', textAlign: 'center' }}>

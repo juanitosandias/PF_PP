@@ -44,5 +44,5 @@ const obtenerTodosLosPedidos = async (req, res) => {
     }
 };
 
-// Asegúrate de exportar las 3 funciones
+
 module.exports = { crearPedido, obtenerMisPedidos, obtenerTodosLosPedidos };

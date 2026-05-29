@@ -3,7 +3,7 @@ import { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { CartContext } from '../context/CartContext';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom'; // <-- 1. Importamos el Link aquí arriba
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [libros, setLibros] = useState([]);
@@ -52,18 +52,18 @@ const Home = () => {
               <p style={{ margin: '0 0 15px 0', color: 'var(--color-texto-ligero)' }}>{libro.autor}</p>
             </div>
             
-            {/* --- AQUÍ ES DONDE AGREGAMOS EL BOTÓN NUEVO --- */}
+            {/* Botones  */}
             <div>
               <p style={{ fontSize: '22px', fontWeight: 'bold', color: 'var(--color-exito)', margin: '0 0 15px 0' }}>
                 ${libro.precio}
               </p>
               
-              {/* Nuevo botón secundario que te lleva a la página de detalles */}
+              {/* botón secundario que te lleva a la página de detalles */}
               <Link to={`/libro/${libro._id}`} className="btn-secundario">
                 Ver Detalles
               </Link>
               
-              {/* El botón primario que ya tenías para el carrito */}
+              {/* El botón primario para el carrito */}
               <button 
                 className="btn-agregar"
                 onClick={() => agregarAlCarrito(libro)}
